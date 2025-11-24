@@ -1,0 +1,48 @@
+# dragon-map
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本は龍の体？ - Dragon Body Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&family=Shippori+Mincho&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-ui">
+        <header>
+            <h1>PROJECT: DRAGON BODY</h1>
+            <div class="subtitle">日本列島龍体説 解析システム</div>
+        </header>
+
+        <div id="map"></div>
+
+        <div id="info-panel" class="hidden">
+            <div class="panel-content">
+                <h2 id="part-name">部位名称</h2>
+                <div class="data-row">
+                    <span class="label">JAPAN:</span>
+                    <span id="jp-loc" class="value">Location</span>
+                </div>
+                <div class="sync-icon">⬇ SYNCHRO ⬇</div>
+                <div class="data-row">
+                    <span class="label">WORLD:</span>
+                    <span id="world-loc" class="value">Location</span>
+                </div>
+                <button onclick="closePanel()">CLOSE DATA</button>
+            </div>
+        </div>
+
+        <footer>
+            <div class="status">SYSTEM: ONLINE</div>
+            <div class="coordinates" id="cursor-coords">LAT: -- LON: --</div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
